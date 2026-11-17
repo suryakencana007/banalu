@@ -1,0 +1,231 @@
+/**
+ * Banalu Theme — mengikuti Brand Guideline & Catalog, Edisi 1 (Oktober 2026).
+ *
+ * Palet:
+ *   Cokelat Banalu  #6B4226  warna utama
+ *   Putih           #FFFFFF  teks/garis di atas cokelat
+ *   Krem Roti       #F3E7DA  latar materi digital
+ *   Cokelat Tua     #4A2A17  teks di atas latar terang
+ *   Cokelat Logo    #371D12  warna asli logo & stiker maskot
+ *
+ * Tipografi: Fredoka (400 isi, 500 label, 600 judul & harga),
+ * cadangan Trebuchet MS.
+ */
+
+:root {
+  --banalu-brown: #6b4226;
+  --banalu-white: #ffffff;
+  --banalu-cream: #f3e7da;
+  --banalu-dark: #4a2a17;
+  --banalu-logo: #371d12;
+
+  --vp-font-family-base: "Fredoka", "Trebuchet MS", sans-serif;
+  --vp-font-family-mono: ui-monospace, Menlo, monospace;
+
+  --vp-c-brand-1: var(--banalu-brown);
+  --vp-c-brand-2: var(--banalu-dark);
+  --vp-c-brand-3: var(--banalu-brown);
+  --vp-c-brand-soft: #6b422618;
+
+  --vp-c-bg: var(--banalu-cream);
+  --vp-c-bg-alt: #ecdcca;
+  --vp-c-bg-soft: #fbf5ee;
+  --vp-c-bg-elv: #fbf5ee;
+  --vp-c-text-1: var(--banalu-dark);
+  --vp-c-text-2: #6b4a35;
+  --vp-c-text-3: #8c6d58;
+  --vp-c-divider: #6b422626;
+  --vp-c-gutter: #6b422614;
+  --vp-c-border: #6b422633;
+
+  --vp-nav-bg-color: var(--banalu-cream);
+  --vp-local-nav-bg-color: var(--banalu-cream);
+
+  --vp-button-brand-bg: var(--banalu-brown);
+  --vp-button-brand-border: var(--banalu-brown);
+  --vp-button-brand-text: var(--banalu-white);
+  --vp-button-brand-hover-bg: var(--banalu-dark);
+  --vp-button-brand-hover-border: var(--banalu-dark);
+  --vp-button-brand-hover-text: var(--banalu-white);
+  --vp-button-alt-bg: transparent;
+  --vp-button-alt-border: var(--banalu-brown);
+  --vp-button-alt-text: var(--banalu-brown);
+  --vp-button-alt-hover-bg: var(--vp-c-brand-soft);
+  --vp-button-alt-hover-border: var(--banalu-dark);
+  --vp-button-alt-hover-text: var(--banalu-dark);
+
+  --vp-home-hero-name-color: var(--banalu-brown);
+  --vp-home-hero-image-background-image: none;
+}
+
+body {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+.VPHero .name,
+.VPHero .text {
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* Logo lettering di navbar: ukuran minimum digital 120 px lebar. */
+.VPNavBarTitle .logo {
+  height: 34px;
+  width: auto;
+  min-width: 120px;
+}
+
+/* Label huruf besar dengan spasi lebar, mis. B R E A D  &  C O F F E E */
+.banalu-label {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 13px;
+  color: var(--banalu-brown);
+}
+
+/* ---------- Beranda ---------- */
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+}
+
+.VPHero .image-src {
+  max-width: 300px;
+  max-height: 300px;
+  transform: rotate(-6deg); /* maskot boleh miring maks ±10° */
+}
+
+@media (min-width: 960px) {
+  .VPHero .image-src {
+    max-width: 380px;
+    max-height: 380px;
+  }
+}
+
+.VPFeature {
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+}
+
+.VPFeature .icon {
+  width: 72px;
+  height: 72px;
+  background: transparent;
+}
+
+.VPFeature .icon img {
+  width: 72px !important;
+  height: 72px !important;
+  object-fit: contain;
+}
+
+/* Blok cokelat dengan teks putih */
+.banalu-band {
+  background: var(--banalu-brown);
+  color: var(--banalu-white);
+  border-radius: 24px;
+  padding: 32px 28px;
+  margin: 48px 0 24px;
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .banalu-band {
+    grid-template-columns: 1.2fr 1fr;
+    padding: 40px 48px;
+  }
+}
+
+.banalu-band h2 {
+  color: var(--banalu-white);
+  border: none;
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.banalu-band p {
+  color: #f3e7dadd;
+  margin: 0;
+}
+
+.banalu-band img {
+  width: 100%;
+  max-width: 360px;
+  justify-self: center;
+}
+
+.banalu-band .banalu-label {
+  color: var(--banalu-cream);
+}
+
+.banalu-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.banalu-ig svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---------- Menu ---------- */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0 32px;
+}
+
+.menu-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  padding: 18px;
+  background: var(--vp-c-bg-soft);
+  text-align: center;
+}
+
+.menu-card img {
+  height: 96px;
+  width: auto;
+  margin: 0 auto 12px;
+  object-fit: contain;
+}
+
+.menu-card h3 {
+  margin: 0 0 4px;
+  border: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+.menu-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc h2 {
+  border-top: none;
+}
+
+.vp-doc img.maskot-inline {
+  width: 140px;
+  float: right;
+  margin: 0 0 12px 16px;
+  transform: rotate(5deg);
+}
