@@ -2,7 +2,7 @@
 
 Situs brand Banalu, dibangun dengan [VitePress](https://vitepress.dev) + Bun dan di-deploy ke GitHub Pages (stack yang sama dengan espresso dan tamper).
 
-**Live:** https://suryakencana007.github.io/banalu/
+**Live:** https://banalu.store/
 
 ## Pengembangan
 

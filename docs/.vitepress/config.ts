@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 
-const BASE = "/banalu/";
-const SITE_URL = `https://suryakencana007.github.io${BASE}`;
+const BASE = "/";
+const SITE_URL = "https://banalu.store/";
 const DESC = "Banalu Bread & Coffee — roti dan kopi dari Bojonegoro, pesan lewat aplikasi dan diantar ke rumah.";
 
 export default defineConfig({
