@@ -73,9 +73,10 @@ h3,
 
 /* Logo lettering di navbar: ukuran minimum digital 120 px lebar. */
 .VPNavBarTitle .logo {
-  height: 34px;
+  height: 30px;
   width: auto;
   min-width: 120px;
+  margin-right: 0;
 }
 
 /* Label huruf besar dengan spasi lebar, mis. B R E A D  &  C O F F E E */
@@ -93,16 +94,25 @@ h3,
   color: var(--vp-c-text-2);
 }
 
+/* Pertahankan translate bawaan VitePress (pemusatan), tambah sedikit miring.
+   Maskot boleh miring maks ±10°. */
 .VPHero .image-src {
-  max-width: 300px;
-  max-height: 300px;
-  transform: rotate(-6deg); /* maskot boleh miring maks ±10° */
+  max-width: 220px;
+  max-height: 220px;
+  transform: translate(-50%, -50%) rotate(-6deg);
+}
+
+@media (min-width: 640px) {
+  .VPHero .image-src {
+    max-width: 280px;
+    max-height: 280px;
+  }
 }
 
 @media (min-width: 960px) {
   .VPHero .image-src {
-    max-width: 380px;
-    max-height: 380px;
+    max-width: 340px;
+    max-height: 340px;
   }
 }
 
