@@ -13,6 +13,7 @@ export default defineConfig({
   cleanUrls: true,
   // Brand guide: materi digital memakai latar krem — tidak ada mode gelap.
   appearance: false,
+  sitemap: { hostname: SITE_URL },
 
   head: [
     ["link", { rel: "icon", href: `${BASE}favicon.png`, type: "image/png" }],
